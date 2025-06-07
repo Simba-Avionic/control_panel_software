@@ -3,7 +3,7 @@ b_h = 20;
 
 include <panel.scad>
 
-T = 28;
+T = 26;
 U = 3;
 
 difference() {
@@ -11,14 +11,14 @@ difference() {
     difference() {
     panel();
     
-    // ARM TANK
-    translate([w/3-5,h/2-27])
+    // IGNITION
+    translate([w/3-5,h/2-32])
     intersection() {
-        circle(d=22, true);
+        circle(d=12, true);
         square([20,22],true);
     }
     
-    // IGNITION
+    // ARM TANK
     translate([2/3*w+5,h/2])
     intersection() {
         circle(d=22, true);
@@ -26,7 +26,7 @@ difference() {
     }
     
     // TANK VENT
-    translate([w/3-5,h/2+27])
+    translate([w/3-5,h/2+32])
     intersection() {
         circle(d=22, true);
         square([20,22],true);

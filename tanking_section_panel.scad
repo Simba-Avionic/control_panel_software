@@ -3,7 +3,7 @@ b_h = 40;
 
 include <panel.scad>
 
-T=36;
+T=38;
 U=3;
 
 difference() {
@@ -19,28 +19,28 @@ difference() {
     }
     
     // MAIN BOTTLE VALVE
-    translate([w/2,h/2 + 27])
+    translate([w/2,h/2 + 32])
     intersection() {
         circle(d=22, true);
         square([20,22],true);
     }
     
     // HOSE VENT
-    translate([w/2,h/2 - 27])
+    translate([w/2,h/2 - 32])
     intersection() {
         circle(d=22, true);
         square([20,22],true);
     }
     
     // DECOUPLER (HOSE DETACH)
-    translate([4*w/5,h/2 - 27])
+    translate([4*w/5,h/2 - 32])
     intersection() {
         circle(d=22, true);
         square([20,22],true);
     }
     
     // NO2/HE SWITCH
-    translate([4*w/5,h/2+ 27])
+    translate([4*w/5,h/2+ 32])
     intersection() {
         circle(d=22, true);
         square([20,22],true);
