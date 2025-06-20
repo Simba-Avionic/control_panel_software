@@ -1,45 +1,10 @@
-
-
-//include "panel.scad";
-
 b_w = 13;
 b_h = 20;
-
-//intersection() {
-//    translate([w/2,h/2, -19])
-//    cube([jr_w*2, jr_h+5, 50], true);
-//
-//    translate([w/2-jr_w/2,h/2-jr_h/2, -19])
-//    import("Tx_Jr_Module_Holder.stl");
-//}
 
 include <panel.scad>
 
 T=6;
 U=2;
-
-module oled_mount() {
-    d=1.8;
-    translate([0,0,-3])
-    linear_extrude(6,true) {
-        translate([21/2, 22/2]) circle(d=d);
-        mirror([0,1]) translate([21/2, 22/2]) circle(d=d);
-        mirror([1,1]) translate([21/2, 22/2]) circle(d=d);
-        mirror([1,0]) translate([21/2, 22/2]) circle(d=d);
-    }
-}
-
-
-module oled() {
-    linear_extrude(1)
-    square([25.5,27], true);
-    linear_extrude(2)
-    square([25.5,20], true);
-    
-    translate([0,13.5/2-5])
-    linear_extrude(10)
-    square([25.5,13.5], true);
-}
 
 module xt60em() {
     translate([-20.5/2,0])circle(d=2.8);
@@ -59,16 +24,33 @@ difference() {
     linear_extrude(3)
     difference() {
     panel();
-        translate([w/2,h*(3/5)+6])
+        translate([w/2,3/4*h - 1])
         square([b_w,b_h], true);
         
-        translate([w/2,h*(1/5)+7])
-        rotate([0,0,-90])
-        #xt60em();
+        translate([w/2,h/2 - 5])
+        xt60em();
 
+        hull() {
+            offset(r=1.2)
+            offset(delta=-1.2)
+            translate([w/2,h/4 - 3])
+            
+            square([9, 3.5], true);           
+        }
+        
+        translate([w/2 + 8,h/4 - 3])
+        circle(d=2.85);
+        
+        translate([w/2 - 8,h/4 - 3])
+        circle(d=2.85);   
     }
-
-
+    
+difference() {
+    linear_extrude(2)
+translate([w/2,h/4 - 3, ])
+                offset(r=2.5)
+            offset(delta=-2.5)
+    square([22,8], true);
 }
-
+}
 

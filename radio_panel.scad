@@ -3,7 +3,7 @@ b_h = 20;
 
 include <panel.scad>
 
-T=6;
+T=8;
 U = 2;
 
 difference() {
@@ -13,7 +13,7 @@ difference() {
     translate([w/2,h/2])
    
     intersection() {
-        circle(d=5.49, true);
+        circle(d=5.75, true);
         //square([20,22],true);
     }
 

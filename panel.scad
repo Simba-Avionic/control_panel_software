@@ -16,8 +16,8 @@ echo(w);
 
 module hole() {
 //    hull() {
-    circle(d=m_d);
-//    translate([5.08/2,0]) circle(d=m_d);
+    //circle(d=m_d);
+    translate([5.08/2,0]) circle(d=m_d);
 //    }
 }
 
