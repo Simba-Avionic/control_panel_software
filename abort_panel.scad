@@ -3,14 +3,14 @@ b_h = 20;
 
 include <panel.scad>
 
-T=10;
+T=8;
 U = 2;
 
 difference() {
     linear_extrude(3)
     difference() {
     panel();
-    translate([w/2,h/2+10])
+    translate([w/2,h/2])
    
     intersection() {
         circle(d=12, true);
@@ -27,8 +27,8 @@ intersection() {
     linear_extrude(3)
     circle(d=h, $fn=6);
     
-    translate([0,0,-6])
-    linear_extrude(6)
+    translate([0,0,-2])
+    linear_extrude(2)
     panel(); 
 }
 
@@ -39,7 +39,7 @@ intersection() {
     linear_extrude(3)
     circle(d=h, $fn=6);
     
-    translate([0,0,-6])
-    linear_extrude(6)
+    translate([0,0,-2])
+    linear_extrude(2)
     panel(); 
 }

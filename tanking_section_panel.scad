@@ -1,5 +1,5 @@
-b_w = 23;
-b_h = 40;
+b_w = 13;
+b_h = 20;
 
 include <panel.scad>
 

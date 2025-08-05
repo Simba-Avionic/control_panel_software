@@ -31,7 +31,7 @@ module panel() {
     square([w, h]);
         holes();
         if(T>6) {
-            translate([(T-3) * 5.08, 0]) holes();
+            translate([(T-3) * 5.08 - 5.08, 0]) holes();
         }
         translate([(T-24) * 5.08, 0]) holes();
     }

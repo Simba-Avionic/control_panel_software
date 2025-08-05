@@ -3,7 +3,7 @@ b_h = 20;
 
 include <panel.scad>
 
-T=6;
+T=10;
 U=2;
 
 module xt60em() {
@@ -45,12 +45,12 @@ difference() {
         circle(d=2.85);   
     }
     
-difference() {
-    linear_extrude(2)
-translate([w/2,h/4 - 3, ])
-                offset(r=2.5)
-            offset(delta=-2.5)
-    square([22,8], true);
-}
+    difference() {
+        linear_extrude(2)
+        translate([w/2,h/4 - 3, 0])
+        offset(r=2.5)
+        offset(delta=-2.5)
+        square([22,8], true);
+    }
 }
 

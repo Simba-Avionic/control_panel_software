@@ -3,7 +3,7 @@ b_h = 20;
 
 include <panel.scad>
 
-T = 26;
+T = 27;
 U = 3;
 
 difference() {
