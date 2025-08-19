@@ -2,8 +2,8 @@ b_w = 13;
 b_h = 20;
 
 include <panel.scad>
-
-T=10;
+// 10
+T=8;
 U=2;
 
 module xt60em() {

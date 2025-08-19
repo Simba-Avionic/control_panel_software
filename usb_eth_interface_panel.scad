@@ -8,7 +8,7 @@ wall_thickness = 8;
 
 include <panel.scad>
 
-T=12;
+T=10;
 U=2;
 
 render()
