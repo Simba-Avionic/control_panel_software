@@ -3,7 +3,7 @@ b_h = 20;
 
 include <panel.scad>
 
-T=38;
+T=32.5;
 U=3;
 
 difference() {
@@ -12,21 +12,21 @@ difference() {
     panel();
     
     // ARM TANK SYSTEM
-    translate([w/5,h/2])
+    translate([w/6,h/2])
     intersection() {
         circle(d=22, true);
         square([20,22],true);
     }
     
     // MAIN BOTTLE VALVE
-    translate([w/2,h/2 + 32])
+    translate([w/2 - 5, h/2 + 32])
     intersection() {
-        circle(d=22, true);
+        circle(d=22, true); 
         square([20,22],true);
     }
     
     // HOSE VENT
-    translate([w/2,h/2 - 32])
+    translate([w/2 - 5,h/2 - 32])
     intersection() {
         circle(d=22, true);
         square([20,22],true);

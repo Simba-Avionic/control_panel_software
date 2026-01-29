@@ -3,30 +3,45 @@ b_h = 20;
 
 include <panel.scad>
 
-T = 27;
+T = 32.5;
 U = 3;
 
 difference() {
     linear_extrude(3)
     difference() {
     panel();
-    
-    // IGNITION
-    translate([w/3-5,h/2-32])
-    intersection() {
-        circle(d=12, true);
-        square([20,22],true);
-    }
-    
+        
     // ARM TANK
-    translate([2/3*w+5,h/2])
+    translate([5*w/6,h/2])
     intersection() {
         circle(d=22, true);
         square([20,22],true);
     }
     
+    // IGNITION
+    translate([w/2+5,h/2-32])
+    intersection() {
+        circle(d=12, true);
+        square([20,22],true);
+    }
+    
     // TANK VENT
-    translate([w/3-5,h/2+32])
+    translate([w/5,h/2+32])
+    intersection() {
+        circle(d=22, true);
+        square([20,22],true);
+    }
+    
+    // DUMP VALVE
+    translate([w/2+5,h/2+32])
+    intersection() {
+        circle(d=22, true);
+        square([20,22],true);
+    }
+    
+    // CAMERA SWITCH
+    translate([w/5,h/2-32])
+    
     intersection() {
         circle(d=22, true);
         square([20,22],true);
