@@ -95,13 +95,15 @@ module fan_50_cutout(x_pos, z_pos) {
             for (dx = [-20, 20]) {
                 for (dy = [-20, 20]) {
                     translate([dx, dy, 0]) cylinder(h=100, d=3.5, center=true, $fn=20);
+                    
+                    translate([dx, dy, -18]) cylinder(h=10, d=7, center=true, $fn=20);
                 }
             }
         }
         
         // NOWOŚĆ: Kieszeń na wentylator (51x51 mm, głębokość 10 mm)
         // Przesunięcie w osi Y tak, aby wciąć się na 10mm w głąb od płaskiej strony
-        translate([0, 12, 0]) 
+        translate([0, 5, 0]) 
         cube([51, 10, 51], center=true);
     }
 }
@@ -119,8 +121,8 @@ module final_part() {
             translate([0,(wf_diff+20+4)]) rotate([90,0,0]) linear_extrude(20) all_holes(11);
             
             // MIEJSCA NA WENTYLATORY
-            fan_50_cutout(-50, d - 30);
-            fan_50_cutout(65, d - 30);
+            fan_50_cutout(-25, d - 37.5);
+            // fan_50_cutout(65, d - 30);
         }
     }
 }
